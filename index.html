@@ -9,7 +9,10 @@
 		<div ng-repeat="product in store.products">
 		<div ng-hide="product.soldout">
 			<h1>{{product.name}}</h1>
-			<h2>{{product.price}}</h2>
+			<h2>{{product.price | currency}}</h2>
+			<div ng-repeat="image in product.images" ng-show="(product.images).length">
+				<img ng-src="{{image.thumb}}" />
+			</div>
 			<p>{{product.description}}</p>
 			<button ng-show="product.canPurchase">Add to Cart</button>
 		</div>
