@@ -5,6 +5,11 @@
 	<title></title>
 </head>
 <body>
+	<div ng-Controller="StoreController as store">
+		<h1>{{store.product.name}}</h1>
+		<h2>{{store.product.price}}</h2>
+		<p>{{store.product.description}}</p>
+	</div>
 
 	<script type="text/javascript" src="node_modules/angular/angular.js"></script>
 	<script type="text/javascript" src="app.js"></script>
