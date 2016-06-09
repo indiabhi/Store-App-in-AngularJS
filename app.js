@@ -10,6 +10,7 @@
 		name: 'Doremon',
 		price: 2.95,
 		description: '....',
+		canPurchase: false,
 	}
 
 
