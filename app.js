@@ -18,6 +18,19 @@
 		};
 	});
 
+	app.controller("GalleryController", function(){
+		this.current = 0;
+
+		this.setCurrent = function(newValue){
+			if (newValue === null){
+				this.current = 0;
+			}
+			else
+			this.current = newValue;
+		};
+
+	});
+
 	var gems = [
 	{
 		name: 'Doremon',

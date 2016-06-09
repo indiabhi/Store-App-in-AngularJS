@@ -11,8 +11,9 @@
 		<div ng-hide="product.soldout">
 			<h1>{{product.name}}</h1>
 			<h2>{{product.price | currency}}</h2>
-			<div ng-repeat="image in product.images" ng-show="(product.images).length">
-				<img ng-src="{{image.thumb}}" />
+			<div ng-controller="GalleryController as gallery">
+			<div ng-show="(product.images).length">
+				<img ng-src="{{image[gallery.current].thumb}}" />
 			</div>
 			<section ng-controller="TabController as panel">
 				<ul class="nav nav-pills">
